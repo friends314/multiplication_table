@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>SPDを使って掛け算九九表を作る - JavaScript</title>
+<link href="style.css" rel="stylesheet">
+<script>
+function  multiplicationTable(){
+	var x,y,z;
+	for (x=1; x<=9; x++) {
+		for (y=1; y<=9; y++) {
+			z = x * y;
+			z = ("0" + z).substr(-2);
+			document.write(x+"x"+y+"="+z+" | ");
+			//var docWrite = sprintf("%dx%d=%2d | ",x,y,z);
+		}
+		document.write("<br>");
+	}
+}
+</script>
+</head>
+<body>
+<h1><a href="index.html">動作デモ</a></h1>
+<div id="content-top">
+	<div id="content-bottom">
+	<article id="content">
+		<h2>掛け算九九</h2>
+		<p><script>JavaScript:multiplicationTable()</script></p>
+	</article>
+	</div>
+</div>
+</body>
+</html>
